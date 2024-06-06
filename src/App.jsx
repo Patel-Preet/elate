@@ -1,8 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Login from './pages/Login'
+import Dashboard from "./pages/Dashboard";
+import NotFound from "./pages/NotFound";
+
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+      <Routes>
+        <Route path="/" element={<Login/>}/>
+        <Route path="dashboard" element={<Dashboard/>}/>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
   );
 }
 
